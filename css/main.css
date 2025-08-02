@@ -1,0 +1,226 @@
+@import "./reset.css";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-image: url("https://i.pinimg.com/originals/2e/2a/dc/2e2adcfc336e7725319ff35823d022ef.png");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #747474;
+}
+
+.wrapper {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.calculator {
+    padding: 46px 28px 27px 28px;
+
+    min-width: 374px;
+    box-shadow: inset -10px -10px 20px 0 #202020, inset 10px 10px 20px 0 rgba(0, 0, 0, 0.25);
+    box-shadow: 0 0 15px #e4e4e4;
+    background: #1a1a1a;
+    border-radius: 15px;
+}
+
+.nav-btn {
+    margin-bottom: 22px;
+
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    font-weight: 500;
+    font-size: 14px;
+
+    letter-spacing: 0.02em;
+    color: #f63356;
+
+
+}
+
+.nav-btn::before {
+    content: "";
+    position: absolute;
+    top: 21px;
+
+    border-radius: 50px 50px 0 0;
+    width: 76px;
+    height: 3px;
+    background: #f63356;
+}
+
+.display__calculator {
+    margin:  0 auto;
+    overflow: hidden;
+
+    margin-bottom: 21px;
+    max-width: 325px;
+    height: 173px;
+    padding: 30px 21px 0 0 ;
+
+    box-shadow: inset -10px -10px 20px 0 #202020, inset 10px 10px 20px 0 rgba(0, 0, 0, 0.25);
+    background: #1a1a1a;
+}
+
+.entering-numbers{
+    margin-bottom: 33px;
+    text-align: right;
+
+    max-width: 300px;
+    font-weight: 400;
+    font-size: 32px;
+    letter-spacing: 0.02em;
+}
+
+.answer{
+    max-width: 300px;
+
+    text-align: right;
+    font-weight: 400;
+    font-size: 35px;
+    letter-spacing: 0.02em;
+    color: #e5e5e5;
+}
+
+.buttons__calculator {
+    padding: 32px 28px 28px 28px;
+
+    display: grid;
+    gap: 26px 25px;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: 400;
+    font-size: 35px;
+    letter-spacing: 0.02em;
+
+    border-radius: 100px;
+    width: 60px;
+    height: 60px;
+
+    box-shadow: -10px -10px 20px 0 #202020, 10px 10px 20px 0 rgba(0, 0, 0, 0.25);
+    background: #242424;
+
+    transition: color .2s ease-in;
+}
+
+.btn:hover {
+    background: #313131;
+    color: #616161;
+}
+
+.active {
+    color: #F63356;
+}
+
+/* input */
+
+input::placeholder {
+    color: #3c3c3c;
+}
+
+/* modal-window | JS */
+
+.modal {
+    position: fixed;
+    z-index: 999;
+
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    margin: 0 auto;
+    min-height: 100vh;
+
+    padding: 15px;
+
+
+    border-radius: 8px;
+    width: 335px;
+    min-height: 320px;
+
+    box-shadow: 0 4px 8px 0 rgba(16, 24, 64, 0.08);
+    background: #fff;
+
+
+    position: absolute;  
+    top: 50%;           
+    left: 50%;          
+    transform: translate(-50%, -50%); 
+}
+
+.modal-content img {
+    margin-bottom: 12px;
+
+    border-radius: 8px;
+    width: 344px;
+    height: 120px;
+}
+
+.modal-content h4 {
+    margin-bottom: 12px;
+
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 152%;
+    text-align: center;
+    color: #282a2f;
+}
+
+.modal-content p {
+    margin-bottom: 32px;
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 160%;
+    text-align: center;
+    color: rgba(34, 34, 38, 0.82);
+}
+
+.modal-content button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: 500;
+    font-size: 12px;
+    color: #fff;
+
+    border: 1px solid #1a1a1c;
+    border-radius: 3px;
+    padding: 8px 16px;
+    width: 310px;
+    height: 31px;
+    
+
+    box-shadow: 0 1px 2px 0 rgba(38, 110, 255, 0.05);
+    background: #1a1a1c;
+
+    transition: background 0.1s ease-in;
+}
+
+.modal-content button:hover {
+    background: #343434;
+}

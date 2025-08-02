@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator | Medok Jesus</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="icon" href="./img/faicon/calculator.ico">
+</head>
+<body>
+
+    <!-- modal -->
+
+    <div id="modal-window" class="modal">
+        <div class="modal-content">
+            <img src="./img/modal/welcome-modal.jpg" alt="welcome-modal">
+            <h4>Добро пожаловать в мой проект !</h4>
+            <p>Перед просмотром хочу выразить благодарность за то, что вы обратили внимание на мою работу. Этот проект создан с полного нуля, в него вложено много усилий и души. Желаю вам приятного просмотра и вдохновения!</p>
+            <button id="modal-close" title="Закрыть">close</button>
+        </div>
+    </div>
+
+    <!-- calculator -->
+
+    <main class="wrapper">
+        <div class="calculator">
+          <a href="./index.html" class="nav-btn" title="Перезагруска калькулятора">Calculator</a>
+          
+            <div class="display__calculator">
+                <input type="text" readonly placeholder="2 + 2" id="displayEntering" class="entering-numbers">
+                </input>
+
+                <input type="text" readonly placeholder="4"  id="displayAnswer" class="answer"   >
+                </input>
+            </div>
+
+            <div class="buttons__calculator">
+                <button class="btn" id="btn" title="Очистить">C</button>
+                <button class="btn" id="btn" title="Процент">%</button>
+                <button class="btn" id="btn" title="Стиреть">⌫</button>
+                <button class="btn active" id="btn" title="Поделить">÷</button>
+                <button class="btn" id="btn">9</button>
+                <button class="btn" id="btn">8</button>
+                <button class="btn" id="btn">7</button>
+                <button class="btn active" id="btn" title="Умножение">x</button>
+                <button class="btn" id="btn">6</button>
+                <button class="btn" id="btn">5</button>
+                <button class="btn" id="btn">4</button>
+                <button class="btn active" id="btn" title="Вычитание">-</button>
+                <button class="btn" id="btn">3</button>
+                <button class="btn" id="btn">2</button>
+                <button class="btn" id="btn">1</button>
+                <button class="btn active" id="btn" title="Сложение">+</button>
+                <button class="btn" id="btn">00</button>
+                <button class="btn" id="btn">0</button>
+                <button class="btn" id="btn" title="Десятичная точка">.</button>
+                <button class="btn active" id="btn" title="Равно (вычислить результат)">=</button>
+            </div>
+        </div>
+    </main>
+
+    <script defer src="./JS/main.js"></script>
+</body>
+</html>
